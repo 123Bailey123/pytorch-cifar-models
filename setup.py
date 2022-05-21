@@ -35,7 +35,7 @@ setup(
     name="pytorch_cifar_models",
     version=VERSION,
     description="Pretrained models for CIFAR10/100 in PyTorch",
-    url="https://github.com/chenyaofo/pytorch-cifar-models",
+    url="https://github.com/123Bailey123/pytorch-cifar-models",
     author="chenyaofo",
     author_email="chenyaofo@gmail.com",
     packages=find_packages(exclude=['test']),
