@@ -48,6 +48,9 @@ from .repvgg import cifar10_repvgg_b3
 from .repvgg import cifar10_repvgg_c0
 from .repvgg import cifar10_repvgg_c1
 from .repvgg import cifar10_repvgg_c2
+from .repvgg import cifar10_repvgg_d0
+from .repvgg import cifar10_repvgg_d1
+from .repvgg import cifar10_repvgg_d2
 
 from .repvgg import cifar100_repvgg_a0
 from .repvgg import cifar100_repvgg_a1
@@ -59,6 +62,9 @@ from .repvgg import cifar100_repvgg_b3
 from .repvgg import cifar100_repvgg_c0
 from .repvgg import cifar100_repvgg_c1
 from .repvgg import cifar100_repvgg_c2
+from .repvgg import cifar100_repvgg_d0
+from .repvgg import cifar100_repvgg_d1
+from .repvgg import cifar100_repvgg_d2
 
 from .vit import cifar10_vit_b16
 from .vit import cifar10_vit_b32

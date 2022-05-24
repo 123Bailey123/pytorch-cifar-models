@@ -239,6 +239,9 @@ def cifar10_repvgg_b3(*args, **kwargs) -> RepVGG: pass
 def cifar10_repvgg_c0(*args, **kwargs) -> RepVGG: pass
 def cifar10_repvgg_c1(*args, **kwargs) -> RepVGG: pass
 def cifar10_repvgg_c2(*args, **kwargs) -> RepVGG: pass
+def cifar10_repvgg_d0(*args, **kwargs) -> RepVGG: pass
+def cifar10_repvgg_d1(*args, **kwargs) -> RepVGG: pass
+def cifar10_repvgg_d2(*args, **kwargs) -> RepVGG: pass
 
 
 def cifar100_repvgg_a0(*args, **kwargs) -> RepVGG: pass
@@ -251,6 +254,9 @@ def cifar100_repvgg_b3(*args, **kwargs) -> RepVGG: pass
 def cifar100_repvgg_c0(*args, **kwargs) -> RepVGG: pass
 def cifar100_repvgg_c1(*args, **kwargs) -> RepVGG: pass
 def cifar100_repvgg_c2(*args, **kwargs) -> RepVGG: pass
+def cifar100_repvgg_d0(*args, **kwargs) -> RepVGG: pass
+def cifar100_repvgg_d1(*args, **kwargs) -> RepVGG: pass
+def cifar100_repvgg_d2(*args, **kwargs) -> RepVGG: pass
 
 
 thismodule = sys.modules[__name__]
@@ -259,12 +265,17 @@ for dataset in ["cifar10", "cifar100"]:
             zip([
             [2, 4, 14, 1], [2, 4, 14, 1], [2, 4, 14, 1], 
             [4, 6, 16, 1], [4, 6, 16, 1], [4, 6, 16, 1], [4, 6, 16, 1],
-            [1, 2, 12, 1], [1, 2, 12, 1], [1, 2, 12, 1]],
+            [1, 2, 12, 1], [1, 2, 12, 1], [1, 2, 12, 1],
+            [1, 2, 8, 1], [1, 2, 8, 1], [1, 2, 8, 1]],
                 [
             [0.75, 0.75, 0.75, 2.5], [1, 1, 1, 2.5], [1.5, 1.5, 1.5, 2.75], 
             [1, 1, 1, 2.5], [2, 2, 2, 4], [2.5, 2.5, 2.5, 5], [3, 3, 3, 5],
+            [0.75, 0.75, 0.75, 2.5], [1, 1, 1, 2.5], [1.5, 1.5, 1.5, 2.75],
             [0.75, 0.75, 0.75, 2.5], [1, 1, 1, 2.5], [1.5, 1.5, 1.5, 2.75]],
-                ["repvgg_a0", "repvgg_a1", "repvgg_a2", "repvgg_b0", "repvgg_b1", "repvgg_b2", "repvgg_b3", "repvgg_c0", "repvgg_c1", "repvgg_c2"]):
+                ["repvgg_a0", "repvgg_a1", "repvgg_a2", 
+                "repvgg_b0", "repvgg_b1", "repvgg_b2", "repvgg_b3", 
+                "repvgg_c0", "repvgg_c1", "repvgg_c2",
+                "repvgg_d0", "repvgg_d1", "repvgg_d2"]):
         method_name = f"{dataset}_{model_name}"
         model_urls = cifar10_pretrained_weight_urls if dataset == "cifar10" else cifar100_pretrained_weight_urls
         num_classes = 10 if dataset == "cifar10" else 100
