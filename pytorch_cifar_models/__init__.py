@@ -18,11 +18,13 @@ from .vgg import cifar100_vgg13_bn
 from .vgg import cifar100_vgg16_bn
 from .vgg import cifar100_vgg19_bn
 
+from .mobilenetv2 import cifar10_mobilenetv2_x0_35
 from .mobilenetv2 import cifar10_mobilenetv2_x0_5
 from .mobilenetv2 import cifar10_mobilenetv2_x0_75
 from .mobilenetv2 import cifar10_mobilenetv2_x1_0
 from .mobilenetv2 import cifar10_mobilenetv2_x1_4
 
+from .mobilenetv2 import cifar100_mobilenetv2_x0_35
 from .mobilenetv2 import cifar100_mobilenetv2_x0_5
 from .mobilenetv2 import cifar100_mobilenetv2_x0_75
 from .mobilenetv2 import cifar100_mobilenetv2_x1_0

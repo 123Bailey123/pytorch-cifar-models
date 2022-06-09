@@ -261,13 +261,13 @@ def _mobilenet_v2(
         model.load_state_dict(state_dict)
     return model
 
-
+def cifar10_mobilenetv2_x0_35(*args, **kwargs) -> MobileNetV2: pass
 def cifar10_mobilenetv2_x0_5(*args, **kwargs) -> MobileNetV2: pass
 def cifar10_mobilenetv2_x0_75(*args, **kwargs) -> MobileNetV2: pass
 def cifar10_mobilenetv2_x1_0(*args, **kwargs) -> MobileNetV2: pass
 def cifar10_mobilenetv2_x1_4(*args, **kwargs) -> MobileNetV2: pass
 
-
+def cifar100_mobilenetv2_x0_35(*args, **kwargs) -> MobileNetV2: pass
 def cifar100_mobilenetv2_x0_5(*args, **kwargs) -> MobileNetV2: pass
 def cifar100_mobilenetv2_x0_75(*args, **kwargs) -> MobileNetV2: pass
 def cifar100_mobilenetv2_x1_0(*args, **kwargs) -> MobileNetV2: pass
@@ -276,8 +276,8 @@ def cifar100_mobilenetv2_x1_4(*args, **kwargs) -> MobileNetV2: pass
 
 thismodule = sys.modules[__name__]
 for dataset in ["cifar10", "cifar100"]:
-    for width_mult, model_name in zip([0.5, 0.75, 1.0, 1.4],
-                                      ["mobilenetv2_x0_5", "mobilenetv2_x0_75", "mobilenetv2_x1_0", "mobilenetv2_x1_4"]):
+    for width_mult, model_name in zip([0.35, 0.5, 0.75, 1.0, 1.4],
+                                      ["mobilenetv2_x0_35", "mobilenetv2_x0_5", "mobilenetv2_x0_75", "mobilenetv2_x1_0", "mobilenetv2_x1_4"]):
         method_name = f"{dataset}_{model_name}"
         model_urls = cifar10_pretrained_weight_urls if dataset == "cifar10" else cifar100_pretrained_weight_urls
         num_classes = 10 if dataset == "cifar10" else 100
